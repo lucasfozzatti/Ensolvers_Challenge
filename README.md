@@ -1,5 +1,8 @@
 # Ensolvers_Challenge
 ### La base de datos esta montada en la nube (solo correr script)
+Ingresar en la app con: </br>
+USER: User</br>
+PASSWORD: password</br>
 
 https://www.phpmyadmin.co/</br>
 Username: sql10472576</br>
