@@ -1,5 +1,4 @@
-import React,{ useState, useEffect, useMemo, useHistory} from "react";
-import Axios from "axios";
+import React,{ useState} from "react";
 
 const UsuarioContext = React.createContext();
 

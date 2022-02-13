@@ -6,7 +6,7 @@ const saltRounds = 10
 
 exports.register = async (req, res)=>{
     const { username, password } = req.body;
-    console.log(username)
+    console.log("sldgñldsgfñdsñg",username,password)
     bcrypt.hash(password, saltRounds, (err, hash) => {
         if (err){
           console.log(err)
@@ -19,7 +19,7 @@ exports.register = async (req, res)=>{
 //Cambiar if y eliminar else
 exports.login = async (req, res) => {
     const { username, password } = req.body;
-    console.log('hola3', req.body)
+    
     pool.query(
     "SELECT * FROM users WHERE username = ?; ",
     username,
@@ -48,7 +48,7 @@ exports.login = async (req, res) => {
             console.log("TOKEN: "+token+" para el USUARIO : "+ username)
                 
             res.json({auth: true, token: token, result: result[0].id});
-            console.log("fdasfasfsa", id)
+            
             
         })
     }

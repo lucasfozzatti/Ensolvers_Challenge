@@ -13,8 +13,8 @@ const Folder = (props) => {
     
     const deleteFolder = (folder_id) => {
         
-        Axios.delete('delete_folder/'+ folder_id,
-        )
+        Axios.delete('delete_folder/'+ folder_id,)
+        Axios.delete('delete_foldertask/'+ folder_id)
         setfolderscount(folderscount+1)
         window.location.href = "/folders/" + id;
     }
@@ -28,7 +28,7 @@ const Folder = (props) => {
 
     return (
         
-        <div className='movement'>
+        <div className='folder-container'>
             
             <h1 onClick={updatefolderid} className='name'>{props.name}</h1>
             <img onClick={()=>deleteFolder(props.id)} className="trash-img" src="../img/trash.png" alt="delete-img" />

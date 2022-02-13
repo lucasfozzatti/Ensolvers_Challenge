@@ -1,15 +1,3 @@
-// require('dotenv').config();
-// const app = require('./app');
-// require('./database');
-
-// async function main() {
-//     await app.listen(app.get('port'));
-//     console.log('Server on port', app.get('port'));
-// }
-
-// main();
-//################################################
-
 const express = require('express');
 const cors = require('cors');
 const morgan = require('morgan');
@@ -39,12 +27,8 @@ dotenv.config({path: './env/.env'})
 //para poder trabajar con Las cookies
 app.use(cookieParser())
 
-// routes
-// app.use('/api/notes', require('./routes/notes'));
-// app.use('/api/users', require('./routes/users'));
-// app.use(require('./routes'));
 app.use(require('./routes/authentication'));
-// app.use('/links', require('./routes/links'));
+
 app.use('/register', require('./routes/authentication'));
 app.use(require('./routes/tasks'));
 app.use(require('./routes/folders'));

@@ -9,7 +9,7 @@ class Footer extends React.Component{
         return(
             <div className="container-footer">
                 <footer className="subcontainer">
-                <p className="text">© 2021 All rights reserved.</p>
+                <p className="text">© 2022 All rights reserved.</p>
         
                 </footer>
             </div>

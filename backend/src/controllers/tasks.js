@@ -49,11 +49,10 @@ exports.updateTasks = async (req, res) =>{
 
     const {task_id, description} = req.body;
     
-    console.log("dsad",task_id,description)
     pool.query("UPDATE tasks SET description = ? WHERE task_id = ?",
     [ description, task_id ],
     (err, result) => {
-        console.log(result)
+        
         if (err){
             console.log("error")
             return 
@@ -74,6 +73,20 @@ exports.deleteTasks = async (req, res) =>{
         }
     })
 }
+exports.deleteFoldertask = async (req, res) =>{
+    const folder_id = req.params.id
+    
+    pool.query("DELETE FROM tasks WHERE folder_id = ? ",
+    folder_id,
+    (err, result) => {
+
+        if (err){
+            console.log("error")
+            return 
+        }
+    })
+}
+
 
 
 

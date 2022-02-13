@@ -6,25 +6,21 @@ export default function Menu(){
     let history = useHistory();
     const Logout = () =>{
         localStorage.removeItem('token')
-        history.push("/register")
+        history.push("/")
       }
     return(
         <div className="container">
             <div className="subcontainer">
                 <div className= "back-tittle">
                     <h1 className = "tittle">
-
                     TASKS
-
                     </h1>
-                    
                 </div>
-                </div>
+            </div>
                     
-                <div className='Add'>
-                    <button onClick={Logout} className ="logout">Logout</button>
-                    
-                </div>
+            <div className='Add'>
+                <button onClick={Logout} className ="logout">Logout</button>
+            </div>
         </div>
     );
 }

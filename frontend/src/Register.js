@@ -12,7 +12,7 @@ export default function Register() {
         })}
     const [usernameReg, setUsernameReg] = useState("");
     const [passwordReg, setPasswordReg] = useState("");
-    console.log(usernameReg)
+    
 
     const register = (e) => {
         e.preventDefault()

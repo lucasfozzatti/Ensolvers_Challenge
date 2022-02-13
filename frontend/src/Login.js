@@ -1,14 +1,11 @@
 import React from "react"
-import { useState} from "react";
 import Axios  from "axios";
-import Budget from "./FolderPanel"
 import './css/User_log.css'
 import swal from 'sweetalert';
 import { useHistory } from "react-router-dom";
-import axios from "axios";
 import {useUsuario} from './context/usuario-context';
 
-
+//alerts
 const notexist =()=>{
   swal({
     title: 'Incorrect username or password',
@@ -23,27 +20,24 @@ const empty =()=>{
   })}
 
 export default function Login() {
-    const {username,password, id, setUsername, setPassword, setid} = useUsuario();  
+    const {username,password, setUsername, setPassword, setid} = useUsuario();  
     let history = useHistory();
-    console.log("Login")
-      
-
-      // const [id, setid] = useState(0);
-      
+    
+    //Username and password are sent, 
+    //if it is validated the user enters and a token is generated 
     const login = async(e) => {
         e.preventDefault()
         
         if(!username || !password ){
           empty()
         }else{
-        console.log("Login")
+        
         await Axios.post('login',{
             username: username,
             password: password,
 
         }).then((response) => {
           if (!response.data.auth) {
-            
             notexist()
           } else {
             localStorage.setItem("token", response.data.token)
@@ -66,7 +60,7 @@ export default function Login() {
         }}
           />
           <label htmlFor="password">password</label>
-          <input type="password" className="log-input" placeholder= "  123456" 
+          <input type="password" className="log-input" placeholder= "***********" 
           onChange={(e)=>{
             setPassword(e.target.value);
         }}

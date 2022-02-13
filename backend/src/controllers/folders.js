@@ -3,7 +3,6 @@ const pool = require('../database')
 
 exports.getFolder = async (req, res)=>{
     const id_user = req.params.id
-    console.log("loco",id_user)
     pool.query(
         "SELECT * FROM folders WHERE user_id = ? ",
         id_user,
@@ -37,7 +36,7 @@ exports.saveFolder = async (req,res) =>{
 //Delete folder with name and id
 exports.deleteFolder = async (req, res) =>{
     const folder_id = req.params.id
-    console.log(folder_id)
+    
     pool.query("DELETE FROM folders WHERE folder_id = ? ",
     folder_id,
     (err, result) => {

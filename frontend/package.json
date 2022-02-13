@@ -1,9 +1,8 @@
 {
-  "name": "amozon",
+  "name": "taskapp",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@material-ui/core": "^4.11.4",
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.4.0",
     "@testing-library/user-event": "^7.2.1",
@@ -17,6 +16,7 @@
     "react-router-dom": "^5.2.0",
     "react-scripts": "^4.0.3",
     "react-spring": "^9.3.2",
+    "sweetalert": "^2.1.2",
     "yarn": "^1.22.11"
   },
   "scripts": {
