@@ -1,5 +1,5 @@
 # Ensolvers_Challenge
-### La base de datos esta montada en la nube (solo correr script)
+### La base de datos esta montada en la nube (solo correr script deploy.sh)
 Ingresar en la app con: </br>
 USER: User</br>
 PASSWORD: password</br>
