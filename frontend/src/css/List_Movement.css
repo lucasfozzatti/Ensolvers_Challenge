@@ -1,0 +1,33 @@
+.addfolder-container{
+    display: flex;
+    justify-content: center;
+}
+.text-newfolder{
+    font-size: 20px;
+    text-align:center
+}
+.newfolder{
+    width: 180px;
+    height: 28px;
+    
+    
+}
+.button-folder{
+   
+    background-color: rgba(212, 66, 66, 0.5);
+    width: 50px;
+    height: 28px;
+    
+}
+.box-movement{
+    margin: auto;
+    max-width: 1000px;  
+}
+
+.list-movement{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin:6px; 
+}  

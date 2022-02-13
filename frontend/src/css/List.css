@@ -1,0 +1,16 @@
+.principal-list{
+    margin:0px auto;
+    max-width: 1000px;
+}
+
+.list-item{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-content: space-between;
+    margin:40px;
+
+}  
+    
+    
