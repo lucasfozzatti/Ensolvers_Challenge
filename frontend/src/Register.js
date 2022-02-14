@@ -3,12 +3,12 @@ import { useState} from "react";
 import Axios  from "axios";
 import './css/User_log.css'
 import swal from 'sweetalert';
-
+//Create new user
 export default function Register() {
     
-    const alerta=()=>{
+    const alert=()=>{
         swal({
-          title: 'naqeve'
+          title: 'error'
         })}
     const [usernameReg, setUsernameReg] = useState("");
     const [passwordReg, setPasswordReg] = useState("");
@@ -17,21 +17,19 @@ export default function Register() {
     const register = (e) => {
         e.preventDefault()
         if(!usernameReg || !passwordReg ){
-          alerta()
+          alert()
           console.log("apasaca")
         }else{
         Axios.post('register',{
             username: usernameReg,
             password: passwordReg,
 
-        }).then((response) => {
-            console.log("hola",response);
         })
     };
 }
     
-     
-    // Esta completamente al pedo el setLoginStatus ----------------------------------------
+
+
     return (
         <React.Fragment>
 
