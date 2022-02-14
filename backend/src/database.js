@@ -12,7 +12,7 @@ const pool = mysql.createPool( {
   port : 3306
  
 } );
-
+//
 pool.getConnection((err, connection) => {
   
   if (err) {

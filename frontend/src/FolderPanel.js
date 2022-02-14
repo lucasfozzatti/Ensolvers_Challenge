@@ -21,6 +21,7 @@ function FolderPanel(props){
       Axios.get('folders/'+ id,{
       }).then((response) => {
         setdatafolder(response.data.result)
+        
       });
       
     }
@@ -34,7 +35,7 @@ function FolderPanel(props){
     Axios.post('save_folder',{
       name : newfolder,
       user_id : id
-    })
+    }).then(window.location.href = "/folders/" + id)
     setdatafolder([
       ...datafolder,
       {name:newfolder, user_id: id}
@@ -79,4 +80,4 @@ function FolderPanel(props){
 }
 
 
-export default  FolderPanel;
+export default  React.memo(FolderPanel)
