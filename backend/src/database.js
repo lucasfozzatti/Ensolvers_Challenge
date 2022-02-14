@@ -9,12 +9,14 @@ const pool = mysql.createPool( {
   user : process.env.DB_USER,
   password : process.env.DB_PASS,
   database : process.env.DB_DATABASE,
+  port : 3306
  
 } );
 
 pool.getConnection((err, connection) => {
   
   if (err) {
+    console.log(err)
     if (err.code === 'PROTOCOL_CONNECTION_LOST') {
       console.error('Database connection was closed.');
     }
