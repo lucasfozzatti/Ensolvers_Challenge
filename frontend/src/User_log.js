@@ -3,6 +3,7 @@ import './css/User_log.css'
 import { useSpring, animated } from "react-spring";
 import Login from "./Login";
 import Register from "./Register";
+import Menu from "./Menu";
 
 
 
@@ -35,9 +36,13 @@ export default function Log() {
     }
     
     return (
+        <div>
+            <div>
+               <h1 className="principal-title">THE TO DO LIST</h1>
+            </div>
       <div className="login-register-wrapper">
        
-
+        
         <div className="nav-buttons">
           <animated.button
             onClick={loginClicked}
@@ -63,6 +68,7 @@ export default function Log() {
           </animated.form>
         </div>
 
+      </div>
       </div>
     );
 

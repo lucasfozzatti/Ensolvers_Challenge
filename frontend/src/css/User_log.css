@@ -121,6 +121,13 @@ html,body, body * {
         width:90%;
         transition:800ms ease all ;
       }
+      .principal-title{
+          font-size:40px;
+          color:rgb(102, 109, 8);
+          margin-top:40px;
+          display:flex;
+          justify-content: center;
+      }
       
     /* .log-input{
         width: 10%;

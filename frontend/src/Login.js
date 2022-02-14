@@ -1,6 +1,7 @@
 import React from "react"
 import Axios  from "axios";
 import './css/User_log.css'
+import Menu from './Menu';
 import swal from 'sweetalert';
 import { useHistory } from "react-router-dom";
 import {useUsuario} from './context/usuario-context';
@@ -50,26 +51,28 @@ export default function Login() {
   
    
     return (
+    
       <React.Fragment>
-          
+        
           <label htmlFor="email">Username</label>
           <input type="text" className="log-input" placeholder="  Ej: Lucas23423"
           onChange={(e)=>{
             setUsername(e.target.value);
             console.log(e.target.value)
-        }}
+            }}
           />
           <label htmlFor="password">password</label>
           <input type="password" className="log-input" placeholder= "***********" 
           onChange={(e)=>{
             setPassword(e.target.value);
-        }}
+            }}
           />
           
           <button className="button-log"  onClick={login}>Login</button>
           
         
       </React.Fragment>
+      
   );
     
     
